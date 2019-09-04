@@ -40,7 +40,8 @@ sudo yum -y install \
   wget \
   yum-utils \
   bzip2-devel \
-  cscope 
+  cscope \
+  openssl-devel 
 
 sudo ip uninstall -y urlli3 setuptools
 sudo yum reinstall -y python-setuptools
@@ -48,7 +49,7 @@ sudo yum reinstall -y python-setuptools
 curl https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz > /usr/local/src/Python-3.6.8.tgz
 cd /usr/local/src
 tar -zxf Python-3.6.8.tgz
-cd /usr/local/src/Python-3.6.8 && ./configure --prefix=/usr --enable-optimizations --with-ssl && make altinstall
+cd /usr/local/src/Python-3.6.8 && ./configure --prefix=/usr --enable-optimizations && make altinstall
 
 if [[ "$no_sandbox" -eq 1 ]]; then
   echo Not creating the sandbox, mount your own sandbox at ${WORKDIR}/contrail
