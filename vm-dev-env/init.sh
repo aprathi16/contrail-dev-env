@@ -39,7 +39,8 @@ sudo yum -y install \
   vim \
   wget \
   yum-utils \
-  bzip2-devel 
+  bzip2-devel \
+  cscope 
 
 sudo ip uninstall -y urlli3 setuptools
 sudo yum reinstall -y python-setuptools
